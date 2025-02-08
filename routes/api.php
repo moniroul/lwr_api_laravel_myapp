@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\NoteController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -15,3 +16,7 @@ Route::get('/test', function () {
         'msg' => 'Api Working fine'
     ];
 });
+
+Route::get('/noteGet', NoteController::class  . '@index');
+Route::post('/noteAdd', NoteController::class  . '@store');
+
