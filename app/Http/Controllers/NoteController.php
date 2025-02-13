@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Note;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class NoteController extends Controller
 {
@@ -32,6 +33,9 @@ class NoteController extends Controller
      */
     public function store(Request $request)
     {
+        // dd($request->title);
+        // Log::info(['title' => $request->title, 'content' => $request->content]);
+        
         $note =  Note::create(
             [
                 'title' => $request->title,
