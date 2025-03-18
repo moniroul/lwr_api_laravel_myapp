@@ -35,7 +35,7 @@ class NoteController extends Controller
     {
         // dd($request->title);
         // Log::info(['title' => $request->title, 'content' => $request->content]);
-        
+
         $note =  Note::create(
             [
                 'title' => $request->title,
